@@ -7,7 +7,7 @@ const mongourl = "mongodb+srv://durgaguna:durgaguna@cluster0.j32t12j.mongodb.net
 
 const port =process.env.port || 7000;
 
-const server = http.createserver(async (req,res) =>{
+const server = http.createServer(async (req,res) =>{
     console.log(req.url)
     if (req.url === '/about'){
         res.writeHead(200,{'Content-Type':'text/html'});
