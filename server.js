@@ -17,13 +17,7 @@ const server = http.createserver((req,res) =>{
             res.end(data);
         })
     }
-    else if(req.url === '/api'){
-        fs.readFile(path.join(_dirname,'public','about.html'),(err,data)=>{
-            if (err) throw err;
-            res.writeHead(200,{'Content-Type':'text/html'});
-            res.end(data);
-        });
-    }
+    
     else if(req.url === '/api') {
         fs.readFile(path.join(__dirname, '','db.json'), (err, data) =>{
             if(err) throw err;
