@@ -24,7 +24,7 @@ const server = http.createserver((req,res) =>{
             res.writeHead(200, {'content-Type':'application/json'});
             res.end(data);
         })
-    }
+    
     } else if (req.url === '/covid') {
         res.writeHead(200, { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" });
     res.write(JSON.stringify(await dbClient()));
@@ -33,7 +33,7 @@ const server = http.createserver((req,res) =>{
     else{
         res.end("<h1> 404 not found </h1>");
     }
-}
+});
 
 
 //const server = http.createServer(requestListener);
