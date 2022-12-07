@@ -7,7 +7,7 @@ const mongourl = "mongodb+srv://durgaguna:durgaguna@cluster0.j32t12j.mongodb.net
 
 const port =process.env.port || 7000;
 
-const server = http.createServer(async (req,res) =>{
+const requestListner =  async function(req,res) {
     console.log(req.url)
     if (req.url === '/about'){
         res.writeHead(200,{'Content-Type':'text/html'});
@@ -33,7 +33,9 @@ const server = http.createServer(async (req,res) =>{
     else{
         res.end("<h1> 404 not found </h1>");
     }
-});
+}
+
+const server = http.createServer(requestListner);
 
 
 //const server = http.createServer(requestListener);
