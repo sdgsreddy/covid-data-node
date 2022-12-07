@@ -4,6 +4,6 @@
   },
   "scripts" : {
     "start": "node server.js",
-    "div" : "node server.js"
+    "dev" : "node server.js"
   }
 }
