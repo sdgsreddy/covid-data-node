@@ -11,7 +11,7 @@ const requestListner =  async function(req,res) {
     console.log(req.url)
     if (req.url === '/about'){
         res.writeHead(200,{'Content-Type':'text/html'});
-        fs.readFile(path.join(_dirname,'public',index.html),(err,data)=>{
+        fs.readFile(path.join(__dirname,'public','index.html'),(err,data)=>{
             if(err) throw err;
             res.writeHead(200,{'Content-Type':'text/html'});
             res.end(data);
