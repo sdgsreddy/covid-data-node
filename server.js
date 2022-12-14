@@ -9,7 +9,7 @@ const port =process.env.port || 7000;
 
 const requestListner =  async function(req,res) {
     console.log(req.url)
-    if (req.url === '/about'){
+    if (req.url === '/'){
         res.writeHead(200,{'Content-Type':'text/html'});
         fs.readFile(path.join(__dirname,'public','index.html'),(err,data)=>{
             if(err) throw err;
